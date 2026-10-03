@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yigit_birthday.js — Visual Studio Code</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="vscode-window">
+        <div class="window-header">
+            <div class="mac-buttons">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="window-title" id="windowTitle">yigit_birthday.js — Visual Studio Code</div>
+        </div>
+
+        <div class="editor-container">
+            <div class="sidebar">
+                <div class="sidebar-title">EXPLORER</div>
+                <div class="file active" data-target="view-js" data-name="yigit_birthday.js"><span class="icon js">JS</span> yigit_birthday.js</div>
+                <div class="file" data-target="view-txt" data-name="mad_city.txt"><span class="icon txt">TXT</span> mad_city.txt</div>
+                <div class="file" data-target="view-json" data-name="stats.json"><span class="icon json">{}</span> stats.json</div>
+            </div>
+
+            <div class="main-editor">
+                <div class="tabs">
+                    <div class="tab active" id="tabTitle">yigit_birthday.js</div>
+                </div>
+                
+                <div id="view-js" class="editor-view">
+                    <div class="code-area">
+                        <div class="line"><span class="ln">1</span><span class="keyword">const</span> <span class="variable">yigit</span> = {</div>
+                        <div class="line"><span class="ln">2</span>    <span class="property">dogumGunu</span>: <span class="string">"28 Ekim"</span>,</div>
+                        <div class="line"><span class="ln">3</span>    <span class="property">tanismaYeri</span>: <span class="string">"Roblox Mad City"</span>,</div>
+                        <div class="line"><span class="ln">4</span>    <span class="property">yetenekler</span>: [<span class="string">"Dersler 100/100"</span>, <span class="string">"Geleceğin Yazılımcısı"</span>],</div>
+                        <div class="line"><span class="ln">5</span>    <span class="property">status</span>: <span class="string">"Efsane Dost 🚀"</span></div>
+                        <div class="line"><span class="ln">6</span>};</div>
+                    </div>
+
+                    <div class="terminal-panel">
+                        <div class="terminal-header">
+                            <span>TERMINAL</span>
+                            <button id="runBtn" class="run-btn">▶ node yigit_birthday.js</button>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line"><span class="prompt">$</span> 28 Ekim için geri sayım çalışıyor...</div>
+                            <div class="countdown-display">
+                                <div class="c-item"><span id="days">00</span><label>GÜN</label></div>
+                                <div class="c-item"><span id="hours">00</span><label>SAAT</label></div>
+                                <div class="c-item"><span id="minutes">00</span><label>DAKİKA</label></div>
+                                <div class="c-item"><span id="seconds">00</span><label>SANİYE</label></div>
+                            </div>
+                            <div id="outputMessage" class="output-message hidden">
+                                [SUCCESS] İyi ki doğdun kanka! Birlikte daha nice efsane projelere ve oyunlara! 🎉
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="view-txt" class="editor-view hidden">
+                    <div class="code-area txt-content">
+                        <div class="line"><span class="ln">1</span>Roblox Mad City de tanıştığımız o ilk günleri dün gibi hatırlıyorum</div>
+                        <div class="line"><span class="ln">2</span>Oyunda birlikte koştururken başlayan dostluğumuz bugün buralara kadar geldi</div>
+                        <div class="line"><span class="ln">3</span>Derslerdeki başarın zekan ve İngilizcenin mükemmelliği zaten her zaman ortadaydı</div>
+                        <div class="line"><span class="ln">4</span>İleride adını büyük yazılım projelerinde duyacağıma hiç şüphem yok</div>
+                        <div class="line"><span class="ln">5</span>Mad City den başlayan bu efsane dostluk hiç bitmesin</div>
+                        <div class="line"><span class="ln">6</span>İyi ki doğdun Yiğit mutlu yıllar bro</div>
+                    </div>
+                </div>
+
+                <div id="view-json" class="editor-view hidden">
+                    <div class="code-area">
+                        <div class="line"><span class="ln">1</span>{</div>
+                        <div class="line"><span class="ln">2</span>    <span class="property">"isim"</span>: <span class="string">"Yiğit"</span>,</div>
+                        <div class="line"><span class="ln">3</span>    <span class="property">"iq"</span>: <span class="number">999</span>,</div>
+                        <div class="line"><span class="ln">4</span>    <span class="property">"ingilizceSeviyesi"</span>: <span class="string">"C2 Native"</span>,</div>
+                        <div class="line"><span class="ln">5</span>    <span class="property">"yazilimHedefi"</span>: <span class="string">"Senior Developer"</span>,</div>
+                        <div class="line"><span class="ln">6</span>    <span class="property">"favoriOyun"</span>: <span class="string">"Roblox Mad City"</span>,</div>
+                        <div class="line"><span class="ln">7</span>    <span class="property">"dostlukPuani"</span>: <span class="string">"10/10"</span></div>
+                        <div class="line"><span class="ln">8</span>}</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

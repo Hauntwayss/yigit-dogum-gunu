@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: #0d1117;
+    color: #e6edf3;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.vscode-window {
+    width: 100%;
+    max-width: 820px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    border: 1px solid #333333;
+    overflow: hidden;
+}
+
+.window-header {
+    background: #2d2d2d;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #252526;
+}
+
+.mac-buttons {
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.window-title {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #999999;
+    font-family: 'Inter', sans-serif;
+}
+
+.editor-container {
+    display: flex;
+    min-height: 480px;
+}
+
+.sidebar {
+    width: 200px;
+    background: #252526;
+    padding: 12px 8px;
+    border-right: 1px solid #2d2d2d;
+    font-size: 0.8rem;
+    user-select: none;
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+.sidebar-title {
+    color: #6e7681;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 8px;
+    letter-spacing: 1px;
+}
+
+.file {
+    padding: 6px 10px;
+    color: #8b949e;
+    border-radius: 4px;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.file:hover {
+    background: #2a2d2e;
+    color: #cccccc;
+}
+
+.file.active {
+    background: #373e47;
+    color: #ffffff;
+}
+
+.icon {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.icon.js { color: #f1e05a; }
+.icon.json { color: #cbd5e1; }
+.icon.txt { color: #ce9178; }
+
+.main-editor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #1e1e1e;
+}
+
+.tabs {
+    background: #252526;
+    display: flex;
+}
+
+.tab {
+    background: #1e1e1e;
+    color: #ffffff;
+    padding: 8px 18px;
+    font-size: 0.8rem;
+    border-top: 2px solid #007acc;
+}
+
+.editor-view {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.code-area {
+    padding: 20px;
+    flex: 1;
+    font-size: 0.88rem;
+    line-height: 1.8;
+}
+
+.line {
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin-bottom: 2px;
+}
+
+.ln {
+    color: #6e7681;
+    user-select: none;
+    display: inline-block;
+    width: 25px;
+    text-align: right;
+    margin-right: 15px;
+}
+
+.keyword { color: #c586c0; }
+.variable { color: #9cdcfe; }
+.property { color: #dcdcaa; }
+.string { color: #ce9178; }
+.number { color: #b5cea8; }
+
+.txt-content .line {
+    color: #ce9178;
+}
+
+.terminal-panel {
+    background: #181818;
+    border-top: 1px solid #2d2d2d;
+    padding: 15px;
+}
+
+.terminal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 0.75rem;
+    color: #858585;
+    font-weight: bold;
+}
+
+.run-btn {
+    background: #0e639c;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.run-btn:hover {
+    background: #1177bb;
+}
+
+.terminal-body {
+    font-size: 0.85rem;
+}
+
+.terminal-line {
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+.prompt {
+    color: #4ec9b0;
+    font-weight: bold;
+}
+
+.countdown-display {
+    display: flex;
+    gap: 12px;
+    margin: 12px 0;
+}
+
+.c-item {
+    background: #252526;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-align: center;
+    min-width: 55px;
+    border: 1px solid #333333;
+}
+
+.c-item span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4ec9b0;
+}
+
+.c-item label {
+    font-size: 0.65rem;
+    color: #858585;
+}
+
+.output-message {
+    margin-top: 10px;
+    color: #4ec9b0;
+    font-weight: bold;
+    padding: 10px;
+    background: rgba(78, 201, 176, 0.1);
+    border-radius: 4px;
+    border: 1px solid rgba(78, 201, 176, 0.2);
+}
+
+.hidden {
+    display: none !important;
+}
